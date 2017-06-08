@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author      Tsvetan Stoychev <t.stoychev@revampix.com>
+ * @website     http://www.revampix.com
+ * @license     http://opensource.org/licenses/osl-3.0.php Open Software Licence 3.0 (OSL-3.0)
+ */
+-->
+<config>
+    <modules>
+        <Revampix_Base62LazyImages>
+            <version>0.0.1</version>
+        </Revampix_Base62LazyImages>
+    </modules>
+
+    <global>
+        <helpers>
+            <revampix_base62lazyimages>
+                <class>Revampix_Base62LazyImages_Helper</class>
+            </revampix_base62lazyimages>
+        </helpers>
+        <blocks>
+            <revampix_base62lazyimages>
+                <class>Revampix_Base62LazyImages_Block</class>
+            </revampix_base62lazyimages>
+        </blocks>
+    </global>
+
+    <frontend>
+        <layout>
+            <updates>
+                <revampix_base62lazyimages>
+                    <file>revampix_base62lazyimages.xml</file>
+                </revampix_base62lazyimages>
+            </updates>
+        </layout>
+    </frontend>
+
+    <default>
+        <revampix_base62lazyimages>
+            <module>
+                <enabled>0</enabled>
+                <!--<use_low_quality_placeholders>1</use_low_quality_placeholders>-->
+                <placeholders_quality>50</placeholders_quality>
+                <base64_blocks_per_request>4</base64_blocks_per_request>
+            </module>
+        </revampix_base62lazyimages>
+    </default>
+
+</config>

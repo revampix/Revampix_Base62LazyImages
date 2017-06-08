@@ -1,0 +1,16 @@
+<?php
+/** @var Revampix_Base62LazyImages_Block_Picture $this */
+
+$_product = $this->getProduct();
+
+$pictureSources = $this->getPictureTagSources();
+?>
+<picture>
+    <?php foreach ($pictureSources as $source) : ?>
+    <source media="<?php echo $source['media'] ?>" data-original-set="<?php echo $source['set'] ?>" />
+    <?php endforeach; ?>
+    <img id="product-collection-image-<?php echo $_product->getId() ?>"
+         src="<?php echo $this->getBase64Placeholder(); ?>"
+         data-original="<?php echo $this->getOriginalFile() ?>"
+         alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" />
+</picture>

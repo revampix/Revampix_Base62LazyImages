@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author      Tsvetan Stoychev <t.stoychev@revampix.com>
+ * @website     http://www.revampix.com
+ * @license     http://opensource.org/licenses/osl-3.0.php Open Software Licence 3.0 (OSL-3.0)
+ */
+-->
+<adminhtml>
+	<acl>
+		<resources>
+			<admin>
+				<children>
+					<system>
+						<children>
+							<config>
+								<children>
+									<revampix_base62lazyimages translate="title" module="revampix_base62lazyimages">
+										<title>Base64 LazyImages</title>
+										<sort_order>300</sort_order>
+									</revampix_base62lazyimages>
+								</children>
+							</config>
+						</children>
+					</system>
+				</children>
+			</admin>
+		</resources>
+	</acl>
+</adminhtml>
